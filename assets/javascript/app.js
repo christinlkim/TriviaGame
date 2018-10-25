@@ -3,33 +3,33 @@ var panel = $("#quiz-area");
 //Question docket
 var questions = [{
   question: "Where was POTUS born?",
-  answers: ["A", "B", "C", "D"],
-  correctAnswer: "C"
+  answers: ["Brooklyn", "Manhattan", "Queens", "Upper Westside"],
+  correctAnswer: "Queens"
 }, {
   question: "How many siblings does POTUS have?",
-  answers: ["A", "B", "C", "D"],
-  correctAnswer: "A"
+  answers: ["5", "4", "3", "2"],
+  correctAnswer: "5"
 }, {
-  question: "Where did POTUS go to college?",
-  answers: ["A", "B", "C", "D"],
-  correctAnswer: "D"
+  question: "Where did POTUS graduate college?",
+  answers: ["Penn State", "NYU", "Fordham", "University of Pennsylvania"],
+  correctAnswer: "University of Pennsylvania"
 }, {
-  question: "What is POTUS' net worth?",
-  answers: ["A", "B", "C", "D"],
-  correctAnswer: "A"
+  question: "What is POTUS' degree in?",
+  answers: ["Economics", "Business", "Accounting", "Finance"],
+  correctAnswer: "Economics"
 }, {
-  question: "How did POTUS acquire his wealth?",
-  answers: ["A", "B", "C", "D"],
-  correctAnswer: "A"
+  question: "How many times has POTUS married?",
+  answers: ["3", "2", "1", "4"],
+  correctAnswer: "3"
+}, {
+  question: "How many children does POTUS have?",
+  answers: ["2", "3", "4", "5"],
+  correctAnswer: "5"
+}, {
+  question: "How grandchildren does POTUS have?",
+  answers: ["6", "7", "8", "9"],
+  correctAnswer: "9"
 }];
-
-
-
-
-
-
-
-
 
 
 
@@ -63,8 +63,8 @@ var game = {
     for (var i = 0; i < questions.length; i++) {
       panel.append("<h2>" + questions[i].question + "</h2>");
       for (var j = 0; j < questions[i].answers.length; j++) {
-        panel.append("<input type='radio' name='question" + i +
-        "'value='" + questions[i].answers[j] + "''>" + questions[i].answers[j]);
+        panel.append("<input type='radio' name='question-" + i +
+        "' value='" + questions[i].answers[j] + "''>" + questions[i].answers[j]);
       }
     }
 
